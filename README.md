@@ -1,11 +1,13 @@
 <div align="center">
 
+<img src="act3d/assets/act3d-icon.png" alt="Act3D" width="110">
+
 # Act3D: Learning to Think and Explore in 3D World
 
 [![arXiv](https://img.shields.io/badge/arXiv-2610.21783-b31b1b.svg)](https://arxiv.org/abs/2610.21783)
 [![Project Page](https://img.shields.io/badge/Project-Page-blue.svg)](https://large-spatial-model.github.io/ACT3D/)
 [![Code](https://img.shields.io/badge/GitHub-Code-181717.svg?logo=github&logoColor=white)](https://github.com/large-spatial-model/ACT3D)
-[![Data](https://img.shields.io/badge/%F0%9F%A4%97%20Data-Act3D--data-yellow.svg)](https://huggingface.co/datasets/Icey444/Act3D-data)
+[![Data](https://img.shields.io/badge/%F0%9F%A4%97%20Data-Act3D--data-yellow.svg)](https://huggingface.co/datasets/ACT3D/Act3D-data)
 
 Yijiang Li, Bingyang Wang, Nuno Vasconcelos
 
@@ -37,7 +39,7 @@ transformers 5.10, vLLM 0.28); flash-attn is not required.
 ## Data
 
 The SFT and RL data are on Hugging Face as
-[Icey444/Act3D-data](https://huggingface.co/datasets/Icey444/Act3D-data). It holds annotations
+[ACT3D/Act3D-data](https://huggingface.co/datasets/ACT3D/Act3D-data). It holds annotations
 only (questions, answers, trajectories, camera poses) and no scene data or images:
 - ScanNet, ARKitScenes and Matterport3D do not allow redistribution, so you download their meshes
   yourself under their own terms.
@@ -47,7 +49,7 @@ only (questions, answers, trajectories, camera poses) and no scene data or image
 
 ```bash
 export ACT3D_ROOT=/path/to/act3d_data
-huggingface-cli download Icey444/Act3D-data --repo-type dataset --local-dir $ACT3D_ROOT
+huggingface-cli download ACT3D/Act3D-data --repo-type dataset --local-dir $ACT3D_ROOT
 # 1. ScanNet and ARKitScenes meshes go under $ACT3D_ROOT/scannet/scans/ and
 #    $ACT3D_ROOT/arkitscenes/3dod/Training/ (file list and checksums: annotations/meshes.sha256)
 # 2. Matterport3D: crop the per-room meshes from the official house_segmentations
@@ -114,7 +116,7 @@ under `$ACT3D_ROOT/benchmarks/`:
 | SQA3D, test (3,519) | [SilongYong/SQA3D](https://github.com/SilongYong/SQA3D) (`sqa_task.zip` on Zenodo, `balanced/` folder) | `benchmarks/sqa3d/v1_balanced_questions_test_scannetv2.json`, `benchmarks/sqa3d/v1_balanced_sqa_annotations_test_scannetv2.json` |
 | SPBench MV (319) / SI (1,009) | [hongxingli/SPBench](https://huggingface.co/datasets/hongxingli/SPBench) (SpatialLadder) | `benchmarks/spbench/SPBench-MV.parquet`, `benchmarks/spbench/SPBench-SI.parquet` |
 | MP3D (1,000 MMScan questions) | [MMScan](https://github.com/OpenRobotLab/EmbodiedScan) (HF `3dllm/MMScan-beta`) | `benchmarks/mmscan/LLaVA-3D_MMScan_QA.json` |
-| ARKit (1,000) | ours: generated from ARKitScenes geometry, in [Act3D-data](https://huggingface.co/datasets/Icey444/Act3D-data) | `annotations/arkit_eval.jsonl` (comes with the Act3D-data download) |
+| ARKit (1,000) | ours: generated from ARKitScenes geometry, in [Act3D-data](https://huggingface.co/datasets/ACT3D/Act3D-data) | `annotations/arkit_eval.jsonl` (comes with the Act3D-data download) |
 
 Then build the pools and run:
 
