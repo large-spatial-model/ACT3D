@@ -84,6 +84,12 @@ a:hover { text-decoration: underline; }
   border-radius: 8px; padding: 4px 12px;
 }
 
+.hero-logo {
+  display: block; margin: 0 auto 1rem; width: 96px; height: 96px;
+  border-radius: 50%;
+}
+@media (max-width: 600px) { .hero-logo { width: 72px; height: 72px; } }
+
 .button-row {
   display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem;
   margin-top: 1.3rem;
