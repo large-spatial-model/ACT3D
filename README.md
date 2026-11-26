@@ -1,6 +1,15 @@
+<div align="center">
+
 # Act3D: Learning to Think and Explore in 3D World
 
-[Paper](https://arxiv.org/abs/2610.21783) · [Project page](https://williamium3000.github.io/act3d/)
+[![arXiv](https://img.shields.io/badge/arXiv-2610.21783-b31b1b.svg)](https://arxiv.org/abs/2610.21783)
+[![Project Page](https://img.shields.io/badge/Project-Page-blue.svg)](https://large-spatial-model.github.io/ACT3D/)
+[![Code](https://img.shields.io/badge/GitHub-Code-181717.svg?logo=github&logoColor=white)](https://github.com/large-spatial-model/ACT3D)
+[![Data](https://img.shields.io/badge/%F0%9F%A4%97%20Data-Act3D--data-yellow.svg)](https://huggingface.co/datasets/Icey444/Act3D-data)
+
+Yijiang Li, Bingyang Wang, Nuno Vasconcelos
+
+</div>
 
 Act3D keeps the 3D scene outside the model. A vision-language model starts from one first-person
 view and a question, then alternates between reasoning and acting — moving or turning the camera
